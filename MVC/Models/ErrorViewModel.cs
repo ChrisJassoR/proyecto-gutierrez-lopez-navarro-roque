@@ -1,6 +1,6 @@
 using System;
 
-namespace Hojas_de_cotejo_lopez_venegas_gutierrez_navarro.Models
+namespace MVC.Models
 {
     public class ErrorViewModel
     {

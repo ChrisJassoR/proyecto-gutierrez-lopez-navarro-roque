@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Hojas_de_cotejo_lopez_venegas_gutierrez_navarro
+namespace MVC
 {
     public class Program
     {

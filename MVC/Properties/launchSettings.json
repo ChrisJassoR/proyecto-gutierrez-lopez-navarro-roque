@@ -3,8 +3,8 @@
     "windowsAuthentication": false, 
     "anonymousAuthentication": true, 
     "iisExpress": {
-      "applicationUrl": "http://localhost:32395",
-      "sslPort": 44393
+      "applicationUrl": "http://localhost:51203",
+      "sslPort": 44314
     }
   },
   "profiles": {
@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Hojas_de_cotejo_lopez_venegas_gutierrez_navarro": {
+    "MVC": {
       "commandName": "Project",
       "launchBrowser": true,
       "applicationUrl": "https://localhost:5001;http://localhost:5000",

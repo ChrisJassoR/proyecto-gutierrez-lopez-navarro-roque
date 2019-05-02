@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Hojas_de_cotejo_lopez_venegas_gutierrez_navarro.Models;
+using MVC.Models;
 
-namespace Hojas_de_cotejo_lopez_venegas_gutierrez_navarro.Controllers
+namespace MVC.Controllers
 {
     public class HomeController : Controller
     {
