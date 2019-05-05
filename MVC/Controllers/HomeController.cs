@@ -12,6 +12,8 @@ namespace MVC.Controllers
     {
         public IActionResult Index()
         {
+            MysqlData.CreatDb();
+            MysqlData.TryConnection();
             return View();
         }
 
