@@ -14,6 +14,10 @@ namespace App.Controllers
         {
             return View();
         }
+        public IActionResult Cotejo()
+        {
+            return View();   
+        }
 
         public IActionResult Privacy()
         {
