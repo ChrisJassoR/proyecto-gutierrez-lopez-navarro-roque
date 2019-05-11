@@ -19,6 +19,7 @@ namespace App.Models
     }
     public class Ciclo
     {
+        [Key]
         public string cicloClave { get; set; }
         public DateTime inicio { get; set; }
         public DateTime fin { get; set; }
@@ -29,19 +30,36 @@ namespace App.Models
         public int alumnoId { get; set; }
         public string nombre { get; set; }
     }
+    public class Tipo
+    {
+        [Key]
+        public int TipoClave { get; set; }
+        public string nombre { get; set; }
+    }
 
-
-
-
-
-
-
+    
     //clases dependientes simples
     public class Materia
     {
         public string materiaClave { get; set; }
         public string Nombre { get; set; }
-
         //falta referencia a Carrera
+    } 
+    public class Competencia
+    {
+        public int competenciaId { get; set; }
+        public string competencia { get; set; }
+        //falta referencia a Tipo
+    }
+    public class Actividad
+    {
+        public int actividadClave { get; set; }
+        public string actividad { get; set; }
+    }
+    public class Curso
+    {
+        
+        
     }
 }
+,                                             
