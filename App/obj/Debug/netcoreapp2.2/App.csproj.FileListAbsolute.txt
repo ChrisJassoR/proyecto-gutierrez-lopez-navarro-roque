@@ -31,3 +31,4 @@ c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2
 c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\App.dll
 c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\App.pdb
 C:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\App.csproj.CopyComplete
+c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Home\Cotejo.g.cshtml.cs
