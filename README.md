@@ -1,10 +1,12 @@
-Hojas de Cotejo
+#Hojas de Cotejo
+
+##Herramientas
 
 
-
-
-
-Herramientas
--Entity Framework Core
--API (aun no podemos saber cual)
--Base de Datos (MySQL)     
+###-Entity Framework Core
+###-Base de Datos
+    MySQL
+###-API
+    API de Google Calendar
+    API DE Google Gmail
+    
