@@ -17,8 +17,17 @@ namespace App.Data
         public DbSet<Profesor> Profesores { get; set; }
         public DbSet<Ciclo> Ciclos { get; set; }
         public DbSet<Alumno> Alumnos { get; set; }
+        public DbSet<Tipo> Tipos { get; set; }
+        public DbSet<Actividad> Actividades { get; set; }
+        public DbSet<Materia> Materias { get; set; }
+        public DbSet<Competencia> Competencias { get; set; }
+        public DbSet<Trabajo> Trabajos { get; set; }  
+        public DbSet<Curso> Cursos { get; set; }
+        public DbSet<CursoActividad> CursoActividades { get; set; }
+        public DbSet<ActividadAlumno> ActividadAlumnos { get; set; }
+        public DbSet<Calificacion> Calificaciones { get; set; }
         //falta terminar dependecias(llaves foraneas)
-        /*
+        /* 
         public DbSet<Materia> Materias { get; set; } 
         */
     }
