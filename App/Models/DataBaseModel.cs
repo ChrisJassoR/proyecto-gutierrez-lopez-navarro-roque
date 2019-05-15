@@ -108,6 +108,7 @@ namespace App.Models
     {
         [Key]
         public int cursoactividadClave { get; set; }
+        public DateTime fecha_entrega {get; set; }
         
         public List<ActividadAlumno> ActividadAlumnoS { get; set; }
         public int actividadClave { get; set; }
@@ -129,7 +130,7 @@ namespace App.Models
     {
         [Key]
         public int calificacionClave { get; set; }
-
+        public bool aprobado {get; set; }
         public int alumnoId { get; set; }
         public Alumno Alumno { get; set; }
         public int cicloClave { get; set; }
