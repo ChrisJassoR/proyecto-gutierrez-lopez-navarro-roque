@@ -13,7 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using App.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MySql.Data.EntityFrameworkCore.Extensions;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace App
 {
@@ -37,7 +37,7 @@ namespace App
             });
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseMySQL(
+                options.UseMySql(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)

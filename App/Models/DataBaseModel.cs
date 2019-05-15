@@ -1,7 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
-using MySql.Data.EntityFrameworkCore.Extensions;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace App.Models
 {
@@ -30,7 +31,7 @@ namespace App.Models
         public DateTime inicio { get; set; }
         public DateTime fin { get; set; }
 
-        public int cicloClave { get; set; }
+        public int cursoClave { get; set; }
         public Curso Curso { get; set; }
     }
     public class Alumno
@@ -72,7 +73,7 @@ namespace App.Models
         [Key]
         public string materiaClave { get; set; }
         public string Nombre { get; set; }
-        //falta referencia a Carrera
+        
         List<Carrera> Carreras { get; set; }
 
         public int Cursoclave { get; set; }
@@ -83,7 +84,7 @@ namespace App.Models
         [Key]
         public int competenciaClave { get; set; }
         public string competencia { get; set; }
-        //falta referencia a Tipo
+        
         List<Tipo> Tipos { get; set; }
 
         public int trabajoClave { get; set; }
@@ -94,8 +95,7 @@ namespace App.Models
     {
         [Key]
         public int trabajoClave { get; set; }
-        //falta referencia a Competencia
-        //falta referencia a Actividad
+        
         public List<Competencia> Competencias { get; set; }
         public List<Actividad> Actividades { get; set; }
     }
@@ -104,9 +104,7 @@ namespace App.Models
     {
         [Key]
         public int cursoClave { get; set; }
-        //falta referencia a Materia
-        //falta referencia a Ciclo
-        //Falta referencia a Profesor
+        
         public List<Materia> Materias { get; set; }
         public List<Ciclo> Ciclos { get; set; }
         public List<Profesor> Profesores { get; set; }
@@ -121,8 +119,7 @@ namespace App.Models
     {
         [Key]
         public int cursoactividadClave { get; set; }
-        //falta refencia a actividad
-        //fata referencia a curso
+        
         public List<Actividad> Actividades { get; set; }
         public List<Curso> Cursos { get; set; }
 
@@ -131,17 +128,17 @@ namespace App.Models
     }
     public class ActividadAlumno
     {
+        [Key]
         public int actividadalumnoClave { get; set; }
-        //falta referencia a alumno
-        //falta referencia a cursoactividad
+        
         public List<Alumno> Alumnos { get; set; }
         public List<CursoActividad> CursoActividades { get; set; }
     }
     public class Calificacion
     {
+        [Key]
         public int calificacionClave { get; set; }
-        //falta referencia a curso
-        //falta referencia a alumno
+
         public List<Curso> Cursos { get; set; }
         public List<Alumno> Alumnos { get; set; }
     }

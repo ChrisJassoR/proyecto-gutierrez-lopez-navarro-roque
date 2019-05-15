@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using App.Models;
-
 namespace App.Controllers
 {
     public class HomeController : Controller
@@ -16,7 +15,7 @@ namespace App.Controllers
         }
         public IActionResult Cotejo()
         {
-            return View();   
+            return View();
         }
 
         public IActionResult Privacy()

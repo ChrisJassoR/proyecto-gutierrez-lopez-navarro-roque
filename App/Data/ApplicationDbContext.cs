@@ -9,6 +9,8 @@ namespace App.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
+      
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
@@ -26,9 +28,7 @@ namespace App.Data
         public DbSet<CursoActividad> CursoActividades { get; set; }
         public DbSet<ActividadAlumno> ActividadAlumnos { get; set; }
         public DbSet<Calificacion> Calificaciones { get; set; }
-        //falta terminar dependecias(llaves foraneas)
-        /* 
-        public DbSet<Materia> Materias { get; set; } 
-        */
+        
     }
+    
 }
