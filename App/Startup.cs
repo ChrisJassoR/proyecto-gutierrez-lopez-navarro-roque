@@ -71,7 +71,7 @@ namespace App
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Hoja_de_Cotejo}/{action=Index}/{id?}");
             });
         }
     }

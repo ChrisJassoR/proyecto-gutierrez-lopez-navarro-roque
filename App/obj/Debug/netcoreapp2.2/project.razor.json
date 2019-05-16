@@ -2764,18 +2764,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Home\\Cotejo.cshtml",
-      "TargetPath": "Views\\Home\\Cotejo.cshtml",
+      "FilePath": "Views\\Admin\\Index.cshtml",
+      "TargetPath": "Views\\Admin\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "Views\\Admin\\tipo.cshtml",
+      "TargetPath": "Views\\Admin\\tipo.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2784,13 +2779,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Hoja_de_Cotejo\\Alumno_Calificacion.cshtml",
+      "TargetPath": "Views\\Hoja_de_Cotejo\\Alumno_Calificacion.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Shared\\_CookieConsentPartial.cshtml",
       "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Admin\\alumno.cshtml",
+      "TargetPath": "Views\\Admin\\alumno.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Hoja_de_Cotejo\\Calificacion.cshtml",
+      "TargetPath": "Views\\Hoja_de_Cotejo\\Calificacion.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2804,13 +2814,58 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Admin\\competencia.cshtml",
+      "TargetPath": "Views\\Admin\\competencia.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Hoja_de_Cotejo\\actividad_alumno.cshtml",
+      "TargetPath": "Views\\Hoja_de_Cotejo\\actividad_alumno.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Admin\\profesor.cshtml",
+      "TargetPath": "Views\\Admin\\profesor.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Admin\\carrera.cshtml",
+      "TargetPath": "Views\\Admin\\carrera.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Shared\\_LoginPartial.cshtml",
       "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Admin\\materia.cshtml",
+      "TargetPath": "Views\\Admin\\materia.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Admin\\ciclo.cshtml",
+      "TargetPath": "Views\\Admin\\ciclo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Admin\\curso.cshtml",
+      "TargetPath": "Views\\Admin\\curso.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Hoja_de_Cotejo\\Hoja_de_cotejo.cshtml",
+      "TargetPath": "Views\\Hoja_de_Cotejo\\Hoja_de_cotejo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Hoja_de_Cotejo\\Index.cshtml",
+      "TargetPath": "Views\\Hoja_de_Cotejo\\Index.cshtml",
       "FileKind": "mvc"
     }
   ]

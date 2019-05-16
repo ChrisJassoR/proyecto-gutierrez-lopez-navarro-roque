@@ -16,8 +16,6 @@ c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2
 c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\App.TagHelpers.output.cache
 c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\App.RazorCoreGenerate.cache
 c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
-c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
-c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.g.cshtml.cs
 c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
 c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
 c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
@@ -31,7 +29,6 @@ c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2
 c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\App.dll
 c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\App.pdb
 C:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\App.csproj.CopyComplete
-c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Home\Cotejo.g.cshtml.cs
 C:\Users\ferna\Desktop\Hojas-de-Cotejo\App\bin\Debug\netcoreapp2.2\app.db
 C:\Users\ferna\Desktop\Hojas-de-Cotejo\App\bin\Debug\netcoreapp2.2\App.deps.json
 C:\Users\ferna\Desktop\Hojas-de-Cotejo\App\bin\Debug\netcoreapp2.2\App.runtimeconfig.json
@@ -66,3 +63,17 @@ C:\Users\ferna\Desktop\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\App.Views.pdb
 C:\Users\ferna\Desktop\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\App.dll
 C:\Users\ferna\Desktop\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\App.pdb
 C:\Users\ferna\Desktop\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\App.csproj.CopyComplete
+c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Admin\alumno.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Admin\carrera.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Admin\ciclo.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Admin\competencia.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Admin\curso.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Admin\materia.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Admin\profesor.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Admin\tipo.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Hoja_de_Cotejo\actividad_alumno.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Hoja_de_Cotejo\Hoja_de_cotejo.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Hoja_de_Cotejo\Index.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Admin\Index.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Hoja_de_Cotejo\Alumno_Calificacion.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\Hojas-de-Cotejo\App\obj\Debug\netcoreapp2.2\Razor\Views\Hoja_de_Cotejo\Calificacion.g.cshtml.cs

@@ -5,20 +5,31 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using App.Models;
+using Microsoft.AspNetCore.Authorization;
+
 namespace App.Controllers
 {
-    public class HomeController : Controller
+    public class Hoja_de_CotejoController : Controller
     {
+        [Authorize]
         public IActionResult Index()
         {
             return View();
         }
-        public IActionResult Cotejo()
+        public IActionResult Hoja_de_Cotejo()
+        {
+            return View();
+        }
+        public IActionResult Calificacion()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Actividad_Alumno()
+        {
+            return View();
+        }
+        public IActionResult Alumno_Calificacion()
         {
             return View();
         }
