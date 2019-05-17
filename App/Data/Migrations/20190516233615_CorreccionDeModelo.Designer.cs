@@ -3,14 +3,16 @@ using System;
 using App.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace App.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190516233615_CorreccionDeModelo")]
+    partial class CorreccionDeModelo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -70,7 +72,9 @@ namespace App.Data.Migrations
 
                     b.Property<bool>("aprobado");
 
-                    b.Property<string>("cicloClave");
+                    b.Property<int>("cicloClave");
+
+                    b.Property<string>("cicloClave1");
 
                     b.Property<int?>("cursoClave");
 
@@ -78,7 +82,7 @@ namespace App.Data.Migrations
 
                     b.HasIndex("alumnoId");
 
-                    b.HasIndex("cicloClave");
+                    b.HasIndex("cicloClave1");
 
                     b.HasIndex("cursoClave");
 
@@ -132,17 +136,21 @@ namespace App.Data.Migrations
                     b.Property<int>("cursoClave")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("cicloClave");
+                    b.Property<int>("cicloClave");
+
+                    b.Property<string>("cicloClave1");
 
                     b.Property<int>("materiaClave");
+
+                    b.Property<string>("materiaClave1");
 
                     b.Property<int>("profesorId");
 
                     b.HasKey("cursoClave");
 
-                    b.HasIndex("cicloClave");
+                    b.HasIndex("cicloClave1");
 
-                    b.HasIndex("materiaClave");
+                    b.HasIndex("materiaClave1");
 
                     b.HasIndex("profesorId");
 
@@ -171,16 +179,18 @@ namespace App.Data.Migrations
 
             modelBuilder.Entity("App.Models.DataBaseModel.Materia", b =>
                 {
-                    b.Property<int>("materiaClave")
+                    b.Property<string>("materiaClave")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Nombre");
 
-                    b.Property<string>("carreraClave");
+                    b.Property<int>("carreraClave");
+
+                    b.Property<string>("carreraClave1");
 
                     b.HasKey("materiaClave");
 
-                    b.HasIndex("carreraClave");
+                    b.HasIndex("carreraClave1");
 
                     b.ToTable("Materias");
                 });
@@ -410,7 +420,7 @@ namespace App.Data.Migrations
 
                     b.HasOne("App.Models.DataBaseModel.Ciclo", "Ciclo")
                         .WithMany()
-                        .HasForeignKey("cicloClave");
+                        .HasForeignKey("cicloClave1");
 
                     b.HasOne("App.Models.DataBaseModel.Curso")
                         .WithMany("Calificacion")
@@ -429,12 +439,11 @@ namespace App.Data.Migrations
                 {
                     b.HasOne("App.Models.DataBaseModel.Ciclo", "Ciclo")
                         .WithMany("Cursos")
-                        .HasForeignKey("cicloClave");
+                        .HasForeignKey("cicloClave1");
 
                     b.HasOne("App.Models.DataBaseModel.Materia", "Materia")
                         .WithMany()
-                        .HasForeignKey("materiaClave")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("materiaClave1");
 
                     b.HasOne("App.Models.DataBaseModel.Profesor", "Profesor")
                         .WithMany("Cursos")
@@ -459,7 +468,7 @@ namespace App.Data.Migrations
                 {
                     b.HasOne("App.Models.DataBaseModel.Carrera", "Carrera")
                         .WithMany("Materias")
-                        .HasForeignKey("carreraClave");
+                        .HasForeignKey("carreraClave1");
                 });
 
             modelBuilder.Entity("App.Models.DataBaseModel.Trabajo", b =>

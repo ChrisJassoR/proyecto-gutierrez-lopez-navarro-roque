@@ -13,7 +13,7 @@ namespace App.Models.DataBaseModel
         
         public List<CursoActividad> CursoActividades { get; set; }
         public List<Calificacion> Calificacion { get; set; }
-        public int cicloClave { get; set; }
+        public string cicloClave { get; set; }
         public Ciclo Ciclo { get; set; }
         public int materiaClave { get; set; }
         public Materia Materia { get; set; }

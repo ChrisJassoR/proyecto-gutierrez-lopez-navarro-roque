@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ferna\\Desktop\\Hojas-de-Cotejo\\App\\App.csproj": {}
+    "C:\\Users\\ferna\\Documents\\proyecto-gutierrez-lopez-navarro-roque\\App\\App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ferna\\Desktop\\Hojas-de-Cotejo\\App\\App.csproj": {
+    "C:\\Users\\ferna\\Documents\\proyecto-gutierrez-lopez-navarro-roque\\App\\App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ferna\\Desktop\\Hojas-de-Cotejo\\App\\App.csproj",
+        "projectUniqueName": "C:\\Users\\ferna\\Documents\\proyecto-gutierrez-lopez-navarro-roque\\App\\App.csproj",
         "projectName": "App",
-        "projectPath": "C:\\Users\\ferna\\Desktop\\Hojas-de-Cotejo\\App\\App.csproj",
+        "projectPath": "C:\\Users\\ferna\\Documents\\proyecto-gutierrez-lopez-navarro-roque\\App\\App.csproj",
         "packagesPath": "C:\\Users\\ferna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ferna\\Desktop\\Hojas-de-Cotejo\\App\\obj\\",
+        "outputPath": "C:\\Users\\ferna\\Documents\\proyecto-gutierrez-lopez-navarro-roque\\App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

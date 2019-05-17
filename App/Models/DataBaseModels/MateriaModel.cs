@@ -9,11 +9,11 @@ namespace App.Models.DataBaseModel
     public class Materia
     {
         [Key]
-        public string materiaClave { get; set; }
+        public int materiaClave { get; set; }
         public string Nombre { get; set; }
         
         List<Curso> Cursos { get; set; }
-        public int carreraClave { get; set; }
+        public string carreraClave { get; set; }
         public Carrera Carrera { get; set; }
     } 
 }

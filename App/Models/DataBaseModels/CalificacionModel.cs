@@ -13,7 +13,7 @@ namespace App.Models.DataBaseModel
         public bool aprobado {get; set; }
         public int alumnoId { get; set; }
         public Alumno Alumno { get; set; }
-        public int cicloClave { get; set; }
+        public string cicloClave { get; set; }
         public Ciclo Ciclo { get; set; }
     }  
 }
