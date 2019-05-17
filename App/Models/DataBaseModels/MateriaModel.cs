@@ -13,6 +13,7 @@ namespace App.Models.DataBaseModel
         public string Nombre { get; set; }
         
         List<Curso> Cursos { get; set; }
+        List<Actividad> Actividades { get; set; }
         public string carreraClave { get; set; }
         public Carrera Carrera { get; set; }
     } 

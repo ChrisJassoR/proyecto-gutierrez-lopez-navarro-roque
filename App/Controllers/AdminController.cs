@@ -11,15 +11,35 @@ namespace App.Controllers
 {
     public class AdminController : Controller
     {
+        private readonly IAlumnoService _alumnoService;
+        private readonly IProfesorService _profesorService;
+        private readonly ICarreraService _carreraService;
+        private readonly IMateriaService _materiaService;
+        private readonly ITipoService _tipoService;
+        private readonly ICompetenciaService _competenciaService;
+        private readonly ICursoService _cursoService;
+        private readonly ICicloService _cicloService;
+        public AdminController( IAlumnoService alumnoService, 
+                                IProfesorService profesorService,
+                                ICarreraService carreraService, 
+                                IMateriaService materiaService,
+                                ITipoService tipoService,
+                                ICompetenciaService competenciaService,
+                                ICursoService cursoService,
+                                ICicloService cicloService)
+        {
+            _alumnoService = alumnoService;
+            _profesorService = profesorService;
+            _carreraService = carreraService;
+            _materiaService = materiaService;
+            _tipoService = tipoService;
+            _competenciaService = competenciaService;
+            _cursoService = cursoService;
+            _cicloService = cicloService;
+        }
         public IActionResult Index()
         {
             return View();
-        }
-
-        private readonly IAlumnoService _alumnoService;
-        public AdminController(IAlumnoService alumnoService)
-        {
-            _alumnoService = alumnoService;
         }
         public async Task<IActionResult> Alumno()
         {
@@ -30,13 +50,6 @@ namespace App.Controllers
             };
             return View(model);
         }
-        /*
-        private readonly IProfesorService _profesorService;
-       
-        public AdminController(IProfesorService profesorService)
-        {
-            _profesorService = profesorService;
-        }
         public async Task<IActionResult> Profesor()
         {
             var profesores = await _profesorService.GetIncompleteItemsAsync();
@@ -45,13 +58,6 @@ namespace App.Controllers
                 Profesores = profesores
             };
             return View(model);
-        }
-
-        private readonly ICarreraService _carreraService;
-      
-        public AdminController(ICarreraService carreraService)
-        {
-            _carreraService = carreraService;
         }
         public async Task<IActionResult> Carrera()
         {
@@ -62,13 +68,6 @@ namespace App.Controllers
             };
             return View(model);
         }
-
-        private readonly IMateriaService _materiaService;
-         
-        public AdminController(IMateriaService materiaService)
-        {
-            _materiaService = materiaService;
-        }
         public async Task<IActionResult> Materia()
         {
             var materias = await _materiaService.GetIncompleteItemsAsync();
@@ -77,13 +76,6 @@ namespace App.Controllers
                 Materias = materias
             };
             return View(model);
-        }
-
-        private readonly ITipoService _tipoService;
-        
-        public AdminController(ITipoService tipoService)
-        {
-            _tipoService = tipoService;
         }
         public async Task<IActionResult> Tipo()
         {
@@ -94,13 +86,6 @@ namespace App.Controllers
             };
             return View(model);
         }
-
-        private readonly ICompetenciaService _competenciaService;
-       
-        public AdminController(ICompetenciaService competenciaService)
-        {
-            _competenciaService = competenciaService;
-        }
         public async Task<IActionResult> Competencia()
         {
             var competencias = await _competenciaService.GetIncompleteItemsAsync();
@@ -109,13 +94,6 @@ namespace App.Controllers
                 Competencias = competencias
             };
             return View(model);
-        }
-
-        private readonly ICursoService _cursoService;
-       
-        public AdminController(ICursoService cursoService)
-        {
-            _cursoService = cursoService;
         }
         public async Task<IActionResult> Curso()
         {
@@ -126,12 +104,6 @@ namespace App.Controllers
             };
             return View(model);
         }
-
-        private readonly ICicloService _cicloService;
-        public AdminController(ICicloService cicloService)
-        {
-            _cicloService = cicloService;
-        }
         public async Task<IActionResult> Ciclo()
         {
             var ciclos = await _cicloService.GetIncompleteItemsAsync();
@@ -140,7 +112,7 @@ namespace App.Controllers
                Ciclos = ciclos
             };
             return View(model);
-        } */
+        } 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

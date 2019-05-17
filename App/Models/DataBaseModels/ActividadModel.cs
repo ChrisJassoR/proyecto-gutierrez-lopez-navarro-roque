@@ -11,9 +11,12 @@ namespace App.Models.DataBaseModel
         [Key]
         public int actividadClave { get; set; }
         public string nombreActidad { get; set; }
-        public int puntaje { get; set; } 
+        public int puntaje { get; set; }
 
         public List<Trabajo> Trabajos { get; set; }
         public List<CursoActividad> CursoActividades { get; set; }
+
+        public int materiaClave { get; set; }
+        public Materia Materia { get; set; }
     }
 }
