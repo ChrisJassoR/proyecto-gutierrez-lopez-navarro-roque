@@ -1,0 +1,8 @@
+@model App.Models.ViewModels.CursoViewModel
+@foreach (var curso in Model.Cursos)
+{
+    @curso.cursoClave
+    @curso.Materia
+    @curso.profesorId
+    @curso.Ciclo 
+}

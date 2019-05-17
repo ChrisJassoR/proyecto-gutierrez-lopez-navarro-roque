@@ -1,0 +1,7 @@
+@model App.Models.ViewModels.MateriaViewModel
+@foreach (var materia in Model.Materias)
+{
+    @materia.materiaClave
+    @materia.Carrera
+    @materia.Nombre
+}

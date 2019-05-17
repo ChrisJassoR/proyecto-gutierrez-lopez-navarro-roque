@@ -1,6 +1,6 @@
 using System;
 using App.Models.DataBaseModel;
-namespace App.Models
+namespace App.Models.ViewModels
 {
     public class AlumnoViewModel
     {

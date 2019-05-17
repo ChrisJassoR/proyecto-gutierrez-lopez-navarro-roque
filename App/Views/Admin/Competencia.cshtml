@@ -1,0 +1,7 @@
+@model App.Models.ViewModels.CompetenciaViewModel
+@foreach (var competencia in Model.Competencias)
+{
+    @competencia.competenciaClave
+    @competencia.Tipo
+    @competencia.competencia
+}

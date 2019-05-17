@@ -1,0 +1,6 @@
+@model App.Models.ViewModels.ProfesorViewModel
+@foreach (var profesor in Model.Profesores)
+{
+    @profesor.profesorId
+    @profesor.nombre
+}
