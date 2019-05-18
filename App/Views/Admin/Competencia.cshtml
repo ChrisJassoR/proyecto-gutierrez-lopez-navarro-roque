@@ -1,4 +1,6 @@
-@model App.Models.ViewModels.CompetenciaViewModel
+@using App.Models.ViewModels
+@using App.Models.DataBaseModel
+@model CompetenciaViewModel
 @foreach (var competencia in Model.Competencias)
 {
     @competencia.competenciaClave

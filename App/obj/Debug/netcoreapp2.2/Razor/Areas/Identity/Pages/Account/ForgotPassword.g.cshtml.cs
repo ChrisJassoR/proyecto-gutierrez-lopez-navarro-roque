@@ -13,13 +13,13 @@ namespace App.Areas.Identity.Pages.Account
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-#line 2 "c:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\Areas\Identity\Pages\_ViewImports.cshtml"
-using App.Areas.Identity;
+#line 1 "c:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\Areas\Identity\Pages\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
-#line 3 "c:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\Areas\Identity\Pages\_ViewImports.cshtml"
-using Microsoft.AspNetCore.Identity;
+#line 2 "c:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\Areas\Identity\Pages\_ViewImports.cshtml"
+using App.Areas.Identity;
 
 #line default
 #line hidden
@@ -29,7 +29,7 @@ using App.Areas.Identity.Pages.Account;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fe4d988d5810b774142bd3c8e3a8a03217ff95d7", @"/Areas/Identity/Pages/Account/ForgotPassword.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e1f3db6741ff40dce019b53e5fd96d144eab7493", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"08a9b23439a1822ae302ede99fce17bfdfc8650a", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9426047c5ac4331e595c0419fce4568259575081", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Account_ForgotPassword : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {

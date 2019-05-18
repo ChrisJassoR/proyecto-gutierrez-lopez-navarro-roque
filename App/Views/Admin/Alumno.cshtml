@@ -1,6 +1,11 @@
-@model App.Models.ViewModels.AlumnoViewModel
+@using App.Models.ViewModels
+@using App.Models.DataBaseModel
+@model AlumnoViewModel
 @foreach (var alumno in Model.Alumnos )
 {
     @alumno.alumnoId
     @alumno.nombre
 }
+<div>
+    @await Html.PartialAsync("Partials/Alumno/AgregarAlumnoPartial", new Alumno())
+</div>

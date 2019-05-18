@@ -2809,6 +2809,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Partials\\Alumno\\ModificarAlumnoPartial.cshtml",
+      "TargetPath": "Views\\Partials\\Alumno\\ModificarAlumnoPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml",
       "FileKind": "mvc"
@@ -2919,6 +2924,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Partials\\Alumno\\EliminarAlumnoPartial.cshtml",
+      "TargetPath": "Views\\Partials\\Alumno\\EliminarAlumnoPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
       "FileKind": "mvc"
@@ -2931,6 +2941,11 @@
     {
       "FilePath": "Views\\Admin\\Competencia.cshtml",
       "TargetPath": "Views\\Admin\\Competencia.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Partials\\Alumno\\AgregarAlumnoPartial.cshtml",
+      "TargetPath": "Views\\Partials\\Alumno\\AgregarAlumnoPartial.cshtml",
       "FileKind": "mvc"
     },
     {

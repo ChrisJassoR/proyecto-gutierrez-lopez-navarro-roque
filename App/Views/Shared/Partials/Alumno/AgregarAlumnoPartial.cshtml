@@ -1,0 +1,8 @@
+@model App.Models.DataBaseModel.Alumno
+<form asp-action="AgregarAlumno" method="POST">
+    <label asp-for="alumnoId">Id</label>
+    <input asp-for="alumnoId">
+    <label asp-for="nombre">Nombre</label>
+    <input asp-for="nombre">
+    <button type="submit">Agregar Alumno</button>
+</form>

@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace App.Controllers
 {
-    [Authorize(Roles = "Administrator")]
+    //[Authorize(Roles = "Administrator")]
     public class AdminController : Controller
     {
         private readonly IAlumnoService _alumnoService;
@@ -66,7 +66,7 @@ namespace App.Controllers
             {
                 return BadRequest("No se pudo agregar alumno");
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Alumno");
         }
 
         public async Task<IActionResult> Profesor()

@@ -1,4 +1,6 @@
-@model App.Models.ViewModels.TipoViewModel
+@using App.Models.ViewModels
+@using App.Models.DataBaseModel
+@model TipoViewModel
 @foreach (var tipo in Model.Tipos)
 {
     @tipo.tipoClave
