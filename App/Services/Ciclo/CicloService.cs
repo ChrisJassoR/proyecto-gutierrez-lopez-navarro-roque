@@ -19,5 +19,11 @@ namespace App.Services
             return await _context.Ciclos
                 .ToArrayAsync();
         }
+        public async Task<bool> AgregarCicloAsync (Ciclo NuevoCiclo)
+        {
+            _context.Ciclos.Add(NuevoCiclo);
+            var saveResult = await _context.SaveChangesAsync();
+            return saveResult==1;
+        }
     }
 }

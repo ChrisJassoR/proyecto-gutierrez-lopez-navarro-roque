@@ -7,5 +7,6 @@ namespace App.Services
     public interface IAlumnoService
     {
         Task<Alumno[]> GetIncompleteItemsAsync();
+        Task<bool> AgregarAlumnoAsync(Alumno NuevoAlumno);
     }
 }

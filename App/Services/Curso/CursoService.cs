@@ -19,5 +19,11 @@ namespace App.Services
             return await _context.Cursos
                 .ToArrayAsync();
         }
+        public async Task<bool> AgregarCursoAsync (Curso NuevoCurso)
+        {
+            _context.Cursos.Add(NuevoCurso);
+            var saveResult = await _context.SaveChangesAsync();
+            return saveResult==1;
+        }
     }
 }

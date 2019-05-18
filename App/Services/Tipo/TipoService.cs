@@ -19,5 +19,11 @@ namespace App.Services
             return await _context.Tipos
                 .ToArrayAsync();
         }
+        public async Task<bool> AgregarTipoAsync (Tipo NuevoTipo)
+        {
+            _context.Tipos.Add(NuevoTipo);
+            var saveResult = await _context.SaveChangesAsync();
+            return saveResult==1;
+        }
     }
 }

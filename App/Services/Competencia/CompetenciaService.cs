@@ -19,5 +19,11 @@ namespace App.Services
             return await _context.Competencias
                 .ToArrayAsync();
         }
+        public async Task<bool> AgregarCompetenciaAsync (Competencia NuevoCompetencia)
+        {
+            _context.Competencias.Add(NuevoCompetencia);
+            var saveResult = await _context.SaveChangesAsync();
+            return saveResult==1;
+        }
     }
 }

@@ -19,5 +19,12 @@ namespace App.Services
             return await _context.Alumnos
                 .ToArrayAsync();
         }
+        public async Task<bool> AgregarAlumnoAsync (Alumno NuevoAlumno)
+        {
+            _context.Alumnos.Add(NuevoAlumno);
+            var saveResult = await _context.SaveChangesAsync();
+            return saveResult==1;
+        }
+        
     }
 }

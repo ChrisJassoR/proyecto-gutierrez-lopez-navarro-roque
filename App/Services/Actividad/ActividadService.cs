@@ -19,6 +19,12 @@ namespace App.Services
             return await _context.Actividades
                 .ToArrayAsync();
         }
+        public async Task<bool> AgregarActividadAsync (Actividad NuevoActividad)
+        {
+            _context.Actividades.Add(NuevoActividad);
+            var saveResult = await _context.SaveChangesAsync();
+            return saveResult==1;
+        }
     }
 }
 

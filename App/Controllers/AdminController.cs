@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using App.Models;
+using App.Models.DataBaseModel;
 using App.Models.ViewModels;
 using App.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -21,9 +22,9 @@ namespace App.Controllers
         private readonly ICompetenciaService _competenciaService;
         private readonly ICursoService _cursoService;
         private readonly ICicloService _cicloService;
-        public AdminController( IAlumnoService alumnoService, 
+        public AdminController(IAlumnoService alumnoService,
                                 IProfesorService profesorService,
-                                ICarreraService carreraService, 
+                                ICarreraService carreraService,
                                 IMateriaService materiaService,
                                 ITipoService tipoService,
                                 ICompetenciaService competenciaService,
@@ -43,6 +44,7 @@ namespace App.Controllers
         {
             return View();
         }
+
         public async Task<IActionResult> Alumno()
         {
             var alumnos = await _alumnoService.GetIncompleteItemsAsync();
@@ -52,6 +54,20 @@ namespace App.Controllers
             };
             return View(model);
         }
+        public async Task<IActionResult> AgregarAlumno(Alumno NuevoAlumno)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            var successful = await _alumnoService.AgregarAlumnoAsync(NuevoAlumno);
+            if (!successful)
+            {
+                return BadRequest("No se pudo agregar alumno");
+            }
+            return RedirectToAction("Index");
+        }
+
         public async Task<IActionResult> Profesor()
         {
             var profesores = await _profesorService.GetIncompleteItemsAsync();
@@ -61,15 +77,43 @@ namespace App.Controllers
             };
             return View(model);
         }
+        public async Task<IActionResult> AgregarProfesor(Profesor NuevoProfesor)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            var successful = await _profesorService.AgregarProfesorAsync(NuevoProfesor);
+            if (!successful)
+            {
+                return BadRequest("No se pudo agregar profesor");
+            }
+            return RedirectToAction("Index");
+        }
+
         public async Task<IActionResult> Carrera()
         {
             var carreras = await _carreraService.GetIncompleteItemsAsync();
             var model = new CarreraViewModel()
             {
-               Carreras = carreras
+                Carreras = carreras
             };
             return View(model);
         }
+        public async Task<IActionResult> AgregarCarrera(Carrera NuevoCarrera)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            var successful = await _carreraService.AgregarCarreraAsync(NuevoCarrera);
+            if (!successful)
+            {
+                return BadRequest("No se pudo agregar carrera");
+            }
+            return RedirectToAction("Index");
+        }
+
         public async Task<IActionResult> Materia()
         {
             var materias = await _materiaService.GetIncompleteItemsAsync();
@@ -79,6 +123,20 @@ namespace App.Controllers
             };
             return View(model);
         }
+        public async Task<IActionResult> AgregarMateria(Materia NuevoMateria)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            var successful = await _materiaService.AgregarMateriaAsync(NuevoMateria);
+            if (!successful)
+            {
+                return BadRequest("No se pudo agregar Materia");
+            }
+            return RedirectToAction("Index");
+        }
+
         public async Task<IActionResult> Tipo()
         {
             var tipos = await _tipoService.GetIncompleteItemsAsync();
@@ -88,6 +146,20 @@ namespace App.Controllers
             };
             return View(model);
         }
+        public async Task<IActionResult> AgregarTipo(Tipo NuevoTipo)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            var successful = await _tipoService.AgregarTipoAsync(NuevoTipo);
+            if (!successful)
+            {
+                return BadRequest("No se pudo agregar Tipo");
+            }
+            return RedirectToAction("Index");
+        }
+
         public async Task<IActionResult> Competencia()
         {
             var competencias = await _competenciaService.GetIncompleteItemsAsync();
@@ -97,6 +169,20 @@ namespace App.Controllers
             };
             return View(model);
         }
+        public async Task<IActionResult> AgregarCompetencia(Competencia NuevoCompetencia)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            var successful = await _competenciaService.AgregarCompetenciaAsync(NuevoCompetencia);
+            if (!successful)
+            {
+                return BadRequest("No se pudo agregar competencia");
+            }
+            return RedirectToAction("Index");
+        }
+
         public async Task<IActionResult> Curso()
         {
             var cursos = await _cursoService.GetIncompleteItemsAsync();
@@ -106,15 +192,43 @@ namespace App.Controllers
             };
             return View(model);
         }
+        public async Task<IActionResult> AgregarCurso(Curso NuevoCurso)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            var successful = await _cursoService.AgregarCursoAsync(NuevoCurso);
+            if (!successful)
+            {
+                return BadRequest("No se pudo agregar curso");
+            }
+            return RedirectToAction("Index");
+        }
+
         public async Task<IActionResult> Ciclo()
         {
             var ciclos = await _cicloService.GetIncompleteItemsAsync();
             var model = new CicloViewModel()
             {
-               Ciclos = ciclos
+                Ciclos = ciclos
             };
             return View(model);
-        } 
+        }
+        public async Task<IActionResult> AgregarCiclo(Ciclo NuevoCiclo)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            var successful = await _cicloService.AgregarCicloAsync(NuevoCiclo);
+            if (!successful)
+            {
+                return BadRequest("No se pudo agregar ciclo");
+            }
+            return RedirectToAction("Index");
+        }
+        
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

@@ -7,5 +7,6 @@ namespace App.Services
     public interface ITipoService
     {
         Task<Tipo[]> GetIncompleteItemsAsync();
+        Task<bool> AgregarTipoAsync(Tipo NuevoTipo);
     }
 }

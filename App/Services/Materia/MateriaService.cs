@@ -19,5 +19,11 @@ namespace App.Services
             return await _context.Materias
                 .ToArrayAsync();
         }
+        public async Task<bool> AgregarMateriaAsync (Materia NuevoMateria)
+        {
+            _context.Materias.Add(NuevoMateria);
+            var saveResult = await _context.SaveChangesAsync();
+            return saveResult==1;
+        }
     }
 }

@@ -19,5 +19,11 @@ namespace App.Services
             return await _context.Carreras
                 .ToArrayAsync();
         }
+        public async Task<bool> AgregarCarreraAsync (Carrera NuevoCarrera)
+        {
+            _context.Carreras.Add(NuevoCarrera);
+            var saveResult = await _context.SaveChangesAsync();
+            return saveResult==1;
+        }
     }
 }

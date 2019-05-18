@@ -7,5 +7,6 @@ namespace App.Services
     public interface ICarreraService
     {
         Task<Carrera[]> GetIncompleteItemsAsync();
+        Task<bool> AgregarCarreraAsync(Carrera NuevoCarrera);
     }
 }
