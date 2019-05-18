@@ -47,10 +47,10 @@ namespace App.Controllers
         //aparecen las actividades del curso al que esta
         public async Task<IActionResult> Hoja_de_Cotejo()
         {
-            var actividadesAlumno = await _actividadAlumnoService.GetIncompleteItemsAsync();
+            var actividadAlumnos = await _actividadAlumnoService.GetIncompleteItemsAsync();
             var model = new ActividadAlumnoViewModel()
             {
-                ActividadAlumnos = actividadesAlumno
+                ActividadAlumnos = actividadAlumnos
             };
             return View(model);
         }
@@ -61,6 +61,16 @@ namespace App.Controllers
             var model = new CalificacionViewModel()
             {
                 Calificaciones = calificaciones
+            };
+            return View(model);
+        }
+        //aparece la misma actividad con los distintos alumnos
+        public async Task<IActionResult> Alumno_Calificacion()
+        {
+            var actividadAlumnos = await _actividadAlumnoService.GetIncompleteItemsAsync();
+            var model = new ActividadAlumnoViewModel()
+            {
+                ActividadAlumnos = actividadAlumnos 
             };
             return View(model);
         }
