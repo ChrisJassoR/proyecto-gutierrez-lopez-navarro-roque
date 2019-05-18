@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using App.Models;
 using App.Models.ViewModels;
 using App.Services;
+using Microsoft.AspNetCore.Authorization;
+
 namespace App.Controllers
 {
     public class AdminController : Controller

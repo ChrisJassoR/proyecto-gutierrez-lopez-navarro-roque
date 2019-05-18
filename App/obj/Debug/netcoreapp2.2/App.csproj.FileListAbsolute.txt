@@ -149,7 +149,6 @@ C:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\Ap
 C:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Views\Admin\Materia.g.cshtml.cs
 C:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Views\Admin\Profesor.g.cshtml.cs
 C:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Views\Admin\Tipo.g.cshtml.cs
-C:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Views\Hoja_de_Cotejo\Actividad_Alumno.g.cshtml.cs
 C:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Views\Hoja_de_Cotejo\Alumno_Calificacion.g.cshtml.cs
 C:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Views\Hoja_de_Cotejo\Calificacion.g.cshtml.cs
 C:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Views\Hoja_de_Cotejo\Hoja_de_Cotejo.g.cshtml.cs

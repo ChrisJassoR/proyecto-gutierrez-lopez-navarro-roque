@@ -5,35 +5,65 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using App.Models;
+using App.Models.ViewModels;
+using App.Services;
 using Microsoft.AspNetCore.Authorization;
 
 namespace App.Controllers
 {
     public class Hoja_de_CotejoController : Controller
     {
+        public readonly ICalificacionService _calificacionService;
+        public readonly IActividadService _actividadService;
+        public readonly ICursoActividadService _cursoActividadService;
+        public readonly IActividadAlumnoService _actividadAlumnoService;
+        public readonly ITrabajoService _trabajoService;
+        public readonly ICursoService _cursoService;
+        public Hoja_de_CotejoController (   ICalificacionService calificacionService,
+                                            IActividadService actividadService,
+                                            ICursoActividadService cursoActividadService,
+                                            IActividadAlumnoService actividadAlumnoService,
+                                            ITrabajoService trabajoService,
+                                            ICursoService cursoService)
+        {
+            _calificacionService = calificacionService;
+            _actividadService = actividadService;
+            _cursoActividadService = cursoActividadService;
+            _actividadAlumnoService = actividadAlumnoService;
+            _trabajoService = trabajoService;
+            _cursoService = cursoService;
+        }
+        //aparecen los cursos en los que esta el alumno //filtrar por el usuario
         [Authorize]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var cursos = await _cursoService.GetIncompleteItemsAsync();
+            var model = new CursoViewModel()
+            {
+                Cursos = cursos
+            };
+            return View(model);
         }
-        public IActionResult Hoja_de_Cotejo()
+        //aparecen las actividades del curso al que esta
+        public async Task<IActionResult> Hoja_de_Cotejo()
         {
-            return View();
+            var actividadesAlumno = await _actividadAlumnoService.GetIncompleteItemsAsync();
+            var model = new ActividadAlumnoViewModel()
+            {
+                ActividadAlumnos = actividadesAlumno
+            };
+            return View(model);
         }
-        public IActionResult Calificacion()
+        //aparecen las calificaciones de los cursos
+        public async Task<IActionResult> Calificacion()
         {
-            return View();
+            var calificaciones = await _calificacionService.GetIncompleteItemsAsync();
+            var model = new CalificacionViewModel()
+            {
+                Calificaciones = calificaciones
+            };
+            return View(model);
         }
-
-        public IActionResult Actividad_Alumno()
-        {
-            return View();
-        }
-        public IActionResult Alumno_Calificacion()
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
