@@ -139,7 +139,6 @@ C:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\Ap
 C:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\App.TagHelpers.input.cache
 C:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\App.TagHelpers.output.cache
 C:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\App.RazorCoreGenerate.cache
-C:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
 C:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Views\Admin\Alumno.g.cshtml.cs
 C:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Views\Admin\Carrera.g.cshtml.cs
 C:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Views\Admin\Ciclo.g.cshtml.cs
@@ -211,3 +210,10 @@ C:\Users\Diana\Documents\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\ne
 C:\Users\Diana\Documents\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\App.dll
 C:\Users\Diana\Documents\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\App.pdb
 C:\Users\Diana\Documents\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\App.csproj.CopyComplete
+c:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Login.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Logout.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Register.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\_ViewImports.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
