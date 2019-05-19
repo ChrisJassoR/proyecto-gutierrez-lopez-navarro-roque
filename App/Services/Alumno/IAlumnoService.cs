@@ -8,7 +8,7 @@ namespace App.Services
     {
         Task<Alumno[]> BuscarAlumnoAsync(string nombre);
         Task<bool> AgregarAlumnoAsync(Alumno NuevoAlumno);
-        Task<bool> ModificarAlumnoAsync(Alumno ModificarAlumno);
+        Task<bool> ModificarAlumnoAsync(int alumnoIdAnterior, Alumno ModificarAlumno);
         Task<bool> EliminarAlumnoAsync(int alumnoId);
     }
 }

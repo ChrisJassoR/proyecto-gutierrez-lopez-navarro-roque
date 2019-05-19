@@ -6,6 +6,15 @@
     @alumno.alumnoId
     @alumno.nombre
 }
+
 <div>
+    <h1>Buscar Alumno</h1>
+    <form action="BuscarAlumno">
+        <input type="text" name="nombre">
+        <button type="submit">Buscar</button>
+    </form>
+</div>
+<div>
+    <h1>Agregar Alumno</h1>
     @await Html.PartialAsync("Partials/Alumno/AgregarAlumnoPartial", new Alumno())
 </div>

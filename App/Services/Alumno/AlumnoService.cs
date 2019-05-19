@@ -18,6 +18,7 @@ namespace App.Services
         {
             return await _context.Alumnos
                 .Where (x => x.nombre.Contains(nombre))
+                .OrderBy (x => x.nombre)
                 .ToArrayAsync();
         }
         public async Task<bool> AgregarAlumnoAsync (Alumno NuevoAlumno)
@@ -27,10 +28,10 @@ namespace App.Services
             var saveResult = await _context.SaveChangesAsync();
             return saveResult==1;
         }
-        public async Task<bool> ModificarAlumnoAsync(Alumno ModificarAlumno)
+        public async Task<bool> ModificarAlumnoAsync(int alumnoIdAnterior, Alumno ModificarAlumno)
         {
             var alumno = await _context.Alumnos
-                .Where(x => x.alumnoId == ModificarAlumno.alumnoId)
+                .Where(x => x.alumnoId == alumnoIdAnterior)
                 .SingleOrDefaultAsync();
                 alumno = ModificarAlumno;
                 var saveResult = await _context.SaveChangesAsync();
