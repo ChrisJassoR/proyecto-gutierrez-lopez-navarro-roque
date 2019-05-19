@@ -14,9 +14,10 @@ namespace App.Services
         {
             _context = context;
         }
-        public async Task<Materia[]> GetIncompleteItemsAsync()
+        public async Task<Materia[]> BuscarMateriaAsync(string nombre)
         {
             return await _context.Materias
+                .Where(x => x.Nombre.Contains(nombre))
                 .ToArrayAsync();
         }
         public async Task<bool> AgregarMateriaAsync (Materia NuevoMateria)

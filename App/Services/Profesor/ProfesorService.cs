@@ -14,9 +14,10 @@ namespace App.Services
         {
             _context = context;
         }
-        public async Task<Profesor[]> GetIncompleteItemsAsync()
+        public async Task<Profesor[]> BuscarProfesorAsync(string nombre)
         {
             return await _context.Profesores
+                .Where(x => x.nombre.Contains(nombre))
                 .ToArrayAsync();
         }
         public async Task<bool> AgregarProfesorAsync (Profesor NuevoProfesor)

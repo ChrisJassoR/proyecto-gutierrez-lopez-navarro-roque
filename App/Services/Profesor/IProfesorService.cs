@@ -6,7 +6,7 @@ namespace App.Services
 {
     public interface IProfesorService
     {
-        Task<Profesor[]> GetIncompleteItemsAsync();
+        Task<Profesor[]> BuscarProfesorAsync (string nombre);
         Task<bool> AgregarProfesorAsync(Profesor NuevoProfesor);
     }
 }

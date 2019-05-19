@@ -14,9 +14,10 @@ namespace App.Services
         {
             _context = context;
         }
-        public async Task<Tipo[]> GetIncompleteItemsAsync()
+        public async Task<Tipo[]> BuscarTipoAsync(string nombre)
         {
             return await _context.Tipos
+                .Where(x => x.nombre.Contains(nombre))
                 .ToArrayAsync();
         }
         public async Task<bool> AgregarTipoAsync (Tipo NuevoTipo)

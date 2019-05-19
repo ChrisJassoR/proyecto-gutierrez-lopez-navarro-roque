@@ -6,7 +6,7 @@ namespace App.Services
 {
     public interface ICursoService
     {
-        Task<Curso[]> GetIncompleteItemsAsync();
+        Task<Curso[]> BuscarCursoAsync(int nombre);
         Task<bool> AgregarCursoAsync(Curso NuevoCurso);
     }
 }

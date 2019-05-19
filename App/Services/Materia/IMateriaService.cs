@@ -6,7 +6,7 @@ namespace App.Services
 {
     public interface IMateriaService
     {
-        Task<Materia[]> GetIncompleteItemsAsync();
+        Task<Materia[]> BuscarMateriaAsync(string nombre);
         Task<bool> AgregarMateriaAsync(Materia NuevoMateria);
     }
 }

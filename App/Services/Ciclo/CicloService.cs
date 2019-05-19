@@ -14,9 +14,10 @@ namespace App.Services
         {
             _context = context;
         }
-        public async Task<Ciclo[]> GetIncompleteItemsAsync()
+        public async Task<Ciclo[]> BuscarCicloAsync(string nombre)
         {
             return await _context.Ciclos
+                .Where(x => x.cicloClave.Contains(nombre))
                 .ToArrayAsync();
         }
         public async Task<bool> AgregarCicloAsync (Ciclo NuevoCiclo)

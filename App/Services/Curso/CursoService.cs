@@ -14,9 +14,10 @@ namespace App.Services
         {
             _context = context;
         }
-        public async Task<Curso[]> GetIncompleteItemsAsync()
+        public async Task<Curso[]> BuscarCursoAsync(int nombre)
         {
             return await _context.Cursos
+                .Where(x => x.cursoClave == nombre)
                 .ToArrayAsync();
         }
         public async Task<bool> AgregarCursoAsync (Curso NuevoCurso)

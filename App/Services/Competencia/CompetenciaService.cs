@@ -14,9 +14,10 @@ namespace App.Services
         {
             _context = context;
         }
-        public async Task<Competencia[]> GetIncompleteItemsAsync()
+        public async Task<Competencia[]> BuscarCompetenciaAsync(string nombre)
         {
             return await _context.Competencias
+                .Where(x => x.competencia.Contains(nombre))
                 .ToArrayAsync();
         }
         public async Task<bool> AgregarCompetenciaAsync (Competencia NuevoCompetencia)

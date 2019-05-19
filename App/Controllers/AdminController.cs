@@ -23,7 +23,15 @@ namespace App.Controllers
         private readonly ICompetenciaService _competenciaService;
         private readonly ICursoService _cursoService;
         private readonly ICicloService _cicloService;
-        private string ALUMNO;
+        private string ALUMNO { get; set; }
+        private string PROFESOR { get; set; }
+        private string CARRERA { get; set; }
+        private string MATERIA { get; set; }
+        private string TIPO { get; set; }
+        private string COMPETENCIA { get; set; }
+        private int CURSO { get; set; }
+        private string CICLO { get; set; }
+
         public AdminController(IAlumnoService alumnoService,
                                 IProfesorService profesorService,
                                 ICarreraService carreraService,
@@ -77,12 +85,17 @@ namespace App.Controllers
 
         public async Task<IActionResult> Profesor()
         {
-            var profesores = await _profesorService.GetIncompleteItemsAsync();
+            var profesores = await _profesorService.BuscarProfesorAsync(PROFESOR);
             var model = new ProfesorViewModel()
             {
                 Profesores = profesores
             };
             return View(model);
+        }
+        public IActionResult BuscarProfesor(string nombre)
+        {
+            PROFESOR = nombre;
+            return RedirectToAction("Profesor");
         }
         public async Task<IActionResult> AgregarProfesor(Profesor NuevoProfesor)
         {
@@ -100,12 +113,17 @@ namespace App.Controllers
 
         public async Task<IActionResult> Carrera()
         {
-            var carreras = await _carreraService.GetIncompleteItemsAsync();
+            var carreras = await _carreraService.BuscarCarreraAsync(CARRERA);
             var model = new CarreraViewModel()
             {
                 Carreras = carreras
             };
             return View(model);
+        }
+        public IActionResult BuscarCarrera(string nombre)
+        {
+            CARRERA = nombre;
+            return RedirectToAction("Carrera");
         }
         public async Task<IActionResult> AgregarCarrera(Carrera NuevoCarrera)
         {
@@ -123,12 +141,17 @@ namespace App.Controllers
 
         public async Task<IActionResult> Materia()
         {
-            var materias = await _materiaService.GetIncompleteItemsAsync();
+            var materias = await _materiaService.BuscarMateriaAsync(MATERIA);
             var model = new MateriaViewModel()
             {
                 Materias = materias
             };
             return View(model);
+        }
+        public IActionResult BuscarMateria(string nombre)
+        {
+            MATERIA = nombre;
+            return RedirectToAction("Materia");
         }
         public async Task<IActionResult> AgregarMateria(Materia NuevoMateria)
         {
@@ -146,12 +169,17 @@ namespace App.Controllers
 
         public async Task<IActionResult> Tipo()
         {
-            var tipos = await _tipoService.GetIncompleteItemsAsync();
+            var tipos = await _tipoService.BuscarTipoAsync(TIPO);
             var model = new TipoViewModel()
             {
                 Tipos = tipos
             };
             return View(model);
+        }
+        public IActionResult BuscarTipo(string nombre)
+        {
+            TIPO = nombre;
+            return RedirectToAction("Tipo");
         }
         public async Task<IActionResult> AgregarTipo(Tipo NuevoTipo)
         {
@@ -169,13 +197,14 @@ namespace App.Controllers
 
         public async Task<IActionResult> Competencia()
         {
-            var competencias = await _competenciaService.GetIncompleteItemsAsync();
+            var competencias = await _competenciaService.BuscarCompetenciaAsync(COMPETENCIA);
             var model = new CompetenciaViewModel()
             {
                 Competencias = competencias
             };
             return View(model);
         }
+        public I
         public async Task<IActionResult> AgregarCompetencia(Competencia NuevoCompetencia)
         {
             if (!ModelState.IsValid)
@@ -192,7 +221,7 @@ namespace App.Controllers
 
         public async Task<IActionResult> Curso()
         {
-            var cursos = await _cursoService.GetIncompleteItemsAsync();
+            var cursos = await _cursoService.BuscarCursoAsync(CURSO);
             var model = new CursoViewModel()
             {
                 Cursos = cursos
@@ -215,7 +244,7 @@ namespace App.Controllers
 
         public async Task<IActionResult> Ciclo()
         {
-            var ciclos = await _cicloService.GetIncompleteItemsAsync();
+            var ciclos = await _cicloService.BuscarCicloAsync(CICLO);
             var model = new CicloViewModel()
             {
                 Ciclos = ciclos

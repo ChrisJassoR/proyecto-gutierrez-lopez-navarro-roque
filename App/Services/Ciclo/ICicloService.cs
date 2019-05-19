@@ -6,7 +6,7 @@ namespace App.Services
 {
     public interface ICicloService
     {
-        Task<Ciclo[]> GetIncompleteItemsAsync();
+        Task<Ciclo[]> BuscarCicloAsync(string nombre);
         Task<bool> AgregarCicloAsync(Ciclo NuevoCiclo);
     }
 }

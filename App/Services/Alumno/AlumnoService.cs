@@ -17,7 +17,7 @@ namespace App.Services
         public async Task<Alumno[]> BuscarAlumnoAsync (string nombre)
         {
             return await _context.Alumnos
-                .Where (x => x.nombre == nombre)
+                .Where (x => x.nombre.Contains(nombre))
                 .ToArrayAsync();
         }
         public async Task<bool> AgregarAlumnoAsync (Alumno NuevoAlumno)

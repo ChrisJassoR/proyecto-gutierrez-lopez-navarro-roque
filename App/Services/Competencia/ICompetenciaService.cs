@@ -6,7 +6,7 @@ namespace App.Services
 {
     public interface ICompetenciaService
     {
-        Task<Competencia[]> GetIncompleteItemsAsync();
+        Task<Competencia[]> BuscarCompetenciaAsync(string nombre);
         Task<bool> AgregarCompetenciaAsync(Competencia NuevoCompetencia);
     }
 }

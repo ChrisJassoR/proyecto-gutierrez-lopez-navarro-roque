@@ -14,9 +14,10 @@ namespace App.Services
         {
             _context = context;
         }
-        public async Task<Carrera[]> GetIncompleteItemsAsync()
+        public async Task<Carrera[]> BuscarCarreraAsync(string nombre)
         {
             return await _context.Carreras
+                .Where (x => x.nombre.Contains(nombre))
                 .ToArrayAsync();
         }
         public async Task<bool> AgregarCarreraAsync (Carrera NuevoCarrera)
