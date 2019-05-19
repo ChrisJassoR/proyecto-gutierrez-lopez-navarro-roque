@@ -22,9 +22,29 @@ namespace App.Services
         public async Task<bool> AgregarAlumnoAsync (Alumno NuevoAlumno)
         {
             _context.Alumnos.Add(NuevoAlumno);
+            //truena al repetir llave primaria
             var saveResult = await _context.SaveChangesAsync();
             return saveResult==1;
         }
+        public async Task<bool> ModificarAlumnoAsync(Alumno ModificarAlumno)
+        {
+            var alumno = await _context.Alumnos
+                .Where(x => x.alumnoId == ModificarAlumno.alumnoId)
+                .SingleOrDefaultAsync();
+                alumno = ModificarAlumno;
+                var saveResult = await _context.SaveChangesAsync();
+                return saveResult == 1;
+        }
+        public async Task<bool> EliminarAlumnoAsync (int alumnoId)
+        {
+            var alumno = await _context.Alumnos
+                .Where(x => x.alumnoId == alumnoId)
+                .SingleOrDefaultAsync();
+                _context.Remove(alumno);
+                var saveResult = await _context.SaveChangesAsync();
+            return saveResult == 1;
+        }
+       
         
     }
 }

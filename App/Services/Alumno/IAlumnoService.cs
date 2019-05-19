@@ -8,5 +8,7 @@ namespace App.Services
     {
         Task<Alumno[]> GetIncompleteItemsAsync();
         Task<bool> AgregarAlumnoAsync(Alumno NuevoAlumno);
+        Task<bool> ModificarAlumnoAsync(Alumno ModificarAlumno);
+        Task<bool> EliminarAlumnoAsync(int alumnoId);
     }
 }
