@@ -6,7 +6,7 @@ namespace App.Services
 {
     public interface IAlumnoService
     {
-        Task<Alumno[]> GetIncompleteItemsAsync();
+        Task<Alumno[]> BuscarAlumnoAsync(string nombre);
         Task<bool> AgregarAlumnoAsync(Alumno NuevoAlumno);
         Task<bool> ModificarAlumnoAsync(Alumno ModificarAlumno);
         Task<bool> EliminarAlumnoAsync(int alumnoId);

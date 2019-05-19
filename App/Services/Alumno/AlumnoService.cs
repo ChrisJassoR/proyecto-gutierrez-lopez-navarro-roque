@@ -14,9 +14,10 @@ namespace App.Services
         {
             _context = context;
         }
-        public async Task<Alumno[]> GetIncompleteItemsAsync()
+        public async Task<Alumno[]> BuscarAlumnoAsync (string nombre)
         {
             return await _context.Alumnos
+                .Where (x => x.nombre == nombre)
                 .ToArrayAsync();
         }
         public async Task<bool> AgregarAlumnoAsync (Alumno NuevoAlumno)

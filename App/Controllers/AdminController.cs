@@ -23,6 +23,7 @@ namespace App.Controllers
         private readonly ICompetenciaService _competenciaService;
         private readonly ICursoService _cursoService;
         private readonly ICicloService _cicloService;
+        private string ALUMNO;
         public AdminController(IAlumnoService alumnoService,
                                 IProfesorService profesorService,
                                 ICarreraService carreraService,
@@ -48,12 +49,17 @@ namespace App.Controllers
 
         public async Task<IActionResult> Alumno()
         {
-            var alumnos = await _alumnoService.GetIncompleteItemsAsync();
+            var alumnos = await _alumnoService.BuscarAlumnoAsync(ALUMNO);
             var model = new AlumnoViewModel()
             {
                 Alumnos = alumnos
             };
             return View(model);
+        }
+        public IActionResult BuscarAlumno(string nombre)
+        {
+            ALUMNO = nombre;
+            return RedirectToAction("Alumno");
         }
         public async Task<IActionResult> AgregarAlumno(Alumno NuevoAlumno)
         {
