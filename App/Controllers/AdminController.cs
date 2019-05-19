@@ -89,7 +89,7 @@ namespace App.Controllers
             {
                 return BadRequest("No se pudo agregar profesor");
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Profesor");
         }
 
         public async Task<IActionResult> Carrera()
@@ -112,7 +112,7 @@ namespace App.Controllers
             {
                 return BadRequest("No se pudo agregar carrera");
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Carrera");
         }
 
         public async Task<IActionResult> Materia()
@@ -135,7 +135,7 @@ namespace App.Controllers
             {
                 return BadRequest("No se pudo agregar Materia");
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Materia");
         }
 
         public async Task<IActionResult> Tipo()
@@ -158,7 +158,7 @@ namespace App.Controllers
             {
                 return BadRequest("No se pudo agregar Tipo");
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Tipo");
         }
 
         public async Task<IActionResult> Competencia()
@@ -174,7 +174,7 @@ namespace App.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Competencia");
             }
             var successful = await _competenciaService.AgregarCompetenciaAsync(NuevoCompetencia);
             if (!successful)
@@ -204,7 +204,7 @@ namespace App.Controllers
             {
                 return BadRequest("No se pudo agregar curso");
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Curso");
         }
 
         public async Task<IActionResult> Ciclo()
@@ -227,7 +227,7 @@ namespace App.Controllers
             {
                 return BadRequest("No se pudo agregar ciclo");
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Ciclo");
         }
         
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
