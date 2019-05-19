@@ -204,7 +204,11 @@ namespace App.Controllers
             };
             return View(model);
         }
-        public I
+        public IActionResult BuscarCompetenica(string nombre)
+        {
+            COMPETENCIA = nombre;
+            return RedirectToAction("Competenicia");
+        }
         public async Task<IActionResult> AgregarCompetencia(Competencia NuevoCompetencia)
         {
             if (!ModelState.IsValid)
@@ -227,6 +231,11 @@ namespace App.Controllers
                 Cursos = cursos
             };
             return View(model);
+        }
+        public IActionResult BuscarCurso(int nombre)
+        {
+            CURSO = nombre;
+            return RedirectToAction("Curso");
         }
         public async Task<IActionResult> AgregarCurso(Curso NuevoCurso)
         {

@@ -19,6 +19,7 @@ namespace App.Controllers
         public readonly IActividadAlumnoService _actividadAlumnoService;
         public readonly ITrabajoService _trabajoService;
         public readonly ICursoService _cursoService;
+        private int CURSO { get; set; }
         public Hoja_de_CotejoController (   ICalificacionService calificacionService,
                                             IActividadService actividadService,
                                             ICursoActividadService cursoActividadService,
@@ -37,7 +38,7 @@ namespace App.Controllers
         [Authorize]
         public async Task<IActionResult> Index()
         {
-            var cursos = await _cursoService.GetIncompleteItemsAsync();
+            var cursos = await _cursoService.BuscarCursoAsync(CURSO);
             var model = new CursoViewModel()
             {
                 Cursos = cursos
