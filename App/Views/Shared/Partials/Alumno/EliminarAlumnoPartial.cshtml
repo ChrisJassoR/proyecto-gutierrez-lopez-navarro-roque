@@ -1,9 +1,5 @@
-@using App.Models.DataBaseModel
-@model Alumno
-<form asp-action="EliminarAlumno" method="POST">
-
-    <label asp-for="alumnoId">Id</label>
-    <input asp-for="alumnoId">
-
+<form action="EliminarAlumno">
+    <label name="alumnoId">alumnoId</label>
+    <input type="number" name="alumnoId">
     <button type="submit">Eliminar Alumno</button>
 </form>

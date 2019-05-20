@@ -9,12 +9,17 @@
 
 <div>
     <h1>Buscar Alumno</h1>
-    <form action="BuscarAlumno">
-        <input type="text" name="nombre">
-        <button type="submit">Buscar</button>
-    </form>
+    @await Html.PartialAsync("Partials/Alumno/BuscarAlumnoPartial")
 </div>
 <div>
     <h1>Agregar Alumno</h1>
     @await Html.PartialAsync("Partials/Alumno/AgregarAlumnoPartial", new Alumno())
+</div>
+<div>
+    <h1>Elimininar Alumno</h1>
+    @await Html.PartialAsync("Partials/Alumno/EliminarAlumnoPartial")
+</div>
+<div>
+    <h1>Modificar Alumno</h1>
+    @await Html.PartialAsync("Partials/Alumno/ModificarAlumnoPartial")
 </div>

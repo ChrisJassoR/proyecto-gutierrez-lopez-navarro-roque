@@ -247,3 +247,4 @@ c:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\Ap
 c:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partials\Alumno\AgregarAlumnoPartial.g.cshtml.cs
 c:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partials\Alumno\EliminarAlumnoPartial.g.cshtml.cs
 c:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partials\Alumno\ModificarAlumnoPartial.g.cshtml.cs
+c:\Users\PC\Desktop\Programación .NET\proyecto-gutierrez-lopez-navarro-roque\App\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partials\Alumno\BuscarAlumnoPartial.g.cshtml.cs

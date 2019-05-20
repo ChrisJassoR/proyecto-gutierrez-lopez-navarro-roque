@@ -28,12 +28,12 @@ namespace App.Services
             var saveResult = await _context.SaveChangesAsync();
             return saveResult==1;
         }
-        public async Task<bool> ModificarAlumnoAsync(int alumnoIdAnterior, Alumno ModificarAlumno)
+        public async Task<bool> ModificarAlumnoAsync(int alumnoId, string nombre)
         {
             var alumno = await _context.Alumnos
-                .Where(x => x.alumnoId == alumnoIdAnterior)
+                .Where(x => x.alumnoId == alumnoId)
                 .SingleOrDefaultAsync();
-                alumno = ModificarAlumno;
+                alumno.nombre = nombre;
                 var saveResult = await _context.SaveChangesAsync();
                 return saveResult == 1;
         }
