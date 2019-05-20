@@ -3,8 +3,12 @@
 @model AlumnoViewModel
 @foreach (var alumno in Model.Alumnos )
 {
-    @alumno.alumnoId
-    @alumno.nombre
+    <div>
+        <h5>
+            @alumno.alumnoId 
+            @alumno.nombre
+        </h5>
+    </div>
 }
 
 <div>
