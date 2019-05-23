@@ -19,6 +19,16 @@
                 <span asp-validation-for="nombre" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="apellidoPaterno" class="control-label"></label>
+                <input asp-for="apellidoPaterno" class="form-control" />
+                <span asp-validation-for="apellidoPaterno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="apellidoMaterno" class="control-label"></label>
+                <input asp-for="apellidoMaterno" class="form-control" />
+                <span asp-validation-for="apellidoMaterno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>

@@ -15,6 +15,7 @@ namespace App.Data
             : base(options)
         {
         }
+        public DbSet<RegisterCount> Registros { get; set; }
         public DbSet<Carrera> Carreras { get; set; }
         public DbSet<Profesor> Profesores { get; set; }
         public DbSet<Ciclo> Ciclos { get; set; }

@@ -29,8 +29,8 @@ namespace App.Areas.Identity.Pages.Account
             _logger = logger;
         }
         [BindProperty]
-        public string ReturnUrl { get; set; }
         public InputModel Input { get; set; }
+        public string ReturnUrl { get; set; }
         public class InputModel
         {
 
@@ -47,9 +47,7 @@ namespace App.Areas.Identity.Pages.Account
             [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Caracteres no permitidos")]
             public string apellidoMaterno { get; set; }
             [Display(Name = "Tipo de Persona")]
-            [Required]
             public string Persona { get; set; }
-            [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
@@ -57,9 +55,9 @@ namespace App.Areas.Identity.Pages.Account
 
         }
 
-        public bool GeneratePassword(int Codigo, string Nombre)
+        public string GeneratePassword(string nombre, string Codigo)
         {
-            return false;
+            return nombre.Substring(0,3) + Codigo.Substring(0,3);
         }
         public void OnGet(string returnUrl = null)
         {
@@ -68,26 +66,25 @@ namespace App.Areas.Identity.Pages.Account
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl = returnUrl ?? Url.Content("~/");
+            Input.Password = GeneratePassword(Input.nombre, Input.Codigo);
+            Input.Persona = "Administrator";
             if (ModelState.IsValid)
             {
+                
                 var user = new Hoja_de_CotejoUser
                 {
                     UserName = Input.Codigo,
                     nombre = Input.nombre,
                     apellidoPaterno = Input.apellidoPaterno,
-                    apellidoMaterno = Input.apellidoMaterno
+                    apellidoMaterno = Input.apellidoMaterno,
+                    Persona = Input.Persona
                 };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
 
-                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    var callbackUrl = Url.Page(
-                        "/Account/ConfirmEmail",
-                        pageHandler: null,
-                        values: new { userId = user.Id, code = code },
-                        protocol: Request.Scheme);
+                    
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     return LocalRedirect(returnUrl);
@@ -98,7 +95,7 @@ namespace App.Areas.Identity.Pages.Account
                 }
             }
             // If we got this far, something failed, redisplay form
-            return Page();
+               return Page();
         }
     }
 }

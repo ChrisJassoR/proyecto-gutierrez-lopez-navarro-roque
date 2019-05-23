@@ -18,8 +18,8 @@ namespace App.Models.DataBaseModel
         public int alumnoId { get; set; }
         public Alumno Alumno { get; set; }
 
-        [DisplayName("Ciclo")]
-        public string cicloClave { get; set; }
-        public Ciclo Ciclo { get; set; }
+        [DisplayName("Curso")]
+        public string cursoClave { get; set; }
+        public Curso Cursos { get; set; }
     }  
 }

@@ -7,13 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using App.Data;
 using App.Models.DataBaseModel;
-using Microsoft.AspNetCore.Identity;
 
 namespace App.Controllers_AdminControllers
 {
     public class AlumnoController : Controller
     {
-        private readonly ApplicationDbContext _context; 
+        private readonly ApplicationDbContext _context;
 
         public AlumnoController(ApplicationDbContext context)
         {
@@ -55,7 +54,7 @@ namespace App.Controllers_AdminControllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("alumnoId,nombre")] Alumno alumno)
+        public async Task<IActionResult> Create([Bind("alumnoId,nombre,apellidoPaterno,apellidoMaterno")] Alumno alumno)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +86,7 @@ namespace App.Controllers_AdminControllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("alumnoId,nombre")] Alumno alumno)
+        public async Task<IActionResult> Edit(int id, [Bind("alumnoId,nombre,apellidoPaterno,apellidoMaterno")] Alumno alumno)
         {
             if (id != alumno.alumnoId)
             {
