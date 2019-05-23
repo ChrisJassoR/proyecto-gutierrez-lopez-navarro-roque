@@ -61,6 +61,10 @@ namespace App.Areas.Identity.Pages.Account
         {
             return false;
         }
+        public void OnGet(string returnUrl = null)
+        {
+            ReturnUrl = returnUrl;
+        }
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl = returnUrl ?? Url.Content("~/");
@@ -71,7 +75,7 @@ namespace App.Areas.Identity.Pages.Account
                     UserName = Input.Codigo,
                     nombre = Input.nombre,
                     apellidoPaterno = Input.apellidoPaterno,
-                    apellidoMaterno = Input.apellidoMaterno 
+                    apellidoMaterno = Input.apellidoMaterno
                 };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
