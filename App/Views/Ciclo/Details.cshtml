@@ -1,0 +1,30 @@
+@model App.Models.DataBaseModel.Ciclo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Ciclo</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.inicio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.inicio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fin)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fin)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.cicloClave">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

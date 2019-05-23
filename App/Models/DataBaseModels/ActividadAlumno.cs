@@ -10,6 +10,7 @@ namespace App.Models.DataBaseModel
     {
         [Key]
         public int actividadalumnoClave { get; set; }
+
         
         public int cursoactividadClave { get; set; }
         public CursoActividad CursoActividad { get; set; }

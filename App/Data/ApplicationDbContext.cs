@@ -4,10 +4,10 @@ using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using App.Models.DataBaseModel;
-
+using App.Areas.Identity.Data;
 namespace App.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<Hoja_de_CotejoUser>
     {
       
 

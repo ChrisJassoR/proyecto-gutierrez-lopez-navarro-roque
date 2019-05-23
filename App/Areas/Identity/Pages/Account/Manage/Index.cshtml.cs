@@ -8,18 +8,19 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using App.Areas.Identity.Data;
 
 namespace App.Areas.Identity.Pages.Account.Manage
 {
     public partial class IndexModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly SignInManager<Hoja_de_CotejoUser> _signInManager;
+        private readonly UserManager<Hoja_de_CotejoUser> _userManager;
         private readonly IEmailSender _emailSender;
 
         public IndexModel(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager,
+            UserManager<Hoja_de_CotejoUser> userManager,
+            SignInManager<Hoja_de_CotejoUser> signInManager,
             IEmailSender emailSender)
         {
             _userManager = userManager;
@@ -39,10 +40,21 @@ namespace App.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
+            public string ReturnUrl { get; set; }
             [Required]
-            [EmailAddress]
-            public string Email { get; set; }
-
+            public string Codigo { get; set; }
+            [Display(Name = "Nombre o nombres")]
+            [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Caracteres no permitidos")]
+            public string nombre { get; set; }
+            [Display(Name = "Apellido Paterno")]
+            [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Caracteres no permitidos")]
+            public string apellidoPaterno { get; set; }
+            [Display(Name = "Apellido Materno")]
+            [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Caracteres no permitidos")]
+            public string apellidoMaterno { get; set; }
+            [Display(Name = "Tipo de Persona")]
+            [Required]
+            public string Persona { get; set; }
             [Phone]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
@@ -64,8 +76,10 @@ namespace App.Areas.Identity.Pages.Account.Manage
 
             Input = new InputModel
             {
-                Email = email,
-                PhoneNumber = phoneNumber
+                nombre = Input.nombre,
+                apellidoPaterno = Input.apellidoPaterno,
+                apellidoMaterno = Input.apellidoPaterno,
+                Codigo = Input.Codigo
             };
 
             IsEmailConfirmed = await _userManager.IsEmailConfirmedAsync(user);
@@ -85,18 +99,6 @@ namespace App.Areas.Identity.Pages.Account.Manage
             {
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
-
-            var email = await _userManager.GetEmailAsync(user);
-            if (Input.Email != email)
-            {
-                var setEmailResult = await _userManager.SetEmailAsync(user, Input.Email);
-                if (!setEmailResult.Succeeded)
-                {
-                    var userId = await _userManager.GetUserIdAsync(user);
-                    throw new InvalidOperationException($"Unexpected error occurred setting email for user with ID '{userId}'.");
-                }
-            }
-
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
             if (Input.PhoneNumber != phoneNumber)
             {
@@ -107,6 +109,18 @@ namespace App.Areas.Identity.Pages.Account.Manage
                     throw new InvalidOperationException($"Unexpected error occurred setting phone number for user with ID '{userId}'.");
                 }
             }
+            if (Input.Codigo != user.UserName)
+                user.UserName = Input.Codigo;
+            if (Input.nombre != user.nombre)
+                user.nombre = Input.nombre;
+            if (Input.apellidoPaterno != user.apellidoPaterno)
+                user.apellidoPaterno = Input.apellidoPaterno;
+            if (Input.apellidoMaterno != user.apellidoMaterno)
+                user.apellidoMaterno = user.apellidoMaterno;
+            await _userManager.UpdateAsync(user); 
+            
+            
+
 
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your profile has been updated";

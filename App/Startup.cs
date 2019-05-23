@@ -14,7 +14,7 @@ using App.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
-using App.Services;
+using App.Areas.Identity.Data;
 
 namespace App
 {
@@ -40,25 +40,13 @@ namespace App
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseMySql(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
+            services.AddDefaultIdentity<Hoja_de_CotejoUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddTransient<IActividadService, ActividadService>();
-            services.AddTransient<IActividadAlumnoService, ActividadAlumnoService>();
-            services.AddTransient<IAlumnoService, AlumnoService>();
-            services.AddTransient<ICalificacionService, CalificacionService>();
-            services.AddTransient<ICarreraService, CarreraService>();
-            services.AddTransient<ICicloService, CicloService>();
-            services.AddTransient<ICompetenciaService, CompetenciaService>();
-            services.AddTransient<ICursoService, CursoService>();
-            services.AddTransient<ICursoActividadService, CursoActividadService>();
-            services.AddTransient<IMateriaService, MateriaService>();
-            services.AddTransient<IProfesorService, ProfesorService>();
-            services.AddTransient<ITipoService, TipoService>();
-            services.AddTransient<ITrabajoService, TrabajoService>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

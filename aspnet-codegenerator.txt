@@ -1,0 +1,7 @@
+dotnet aspnet-codegenerator controller -name AlumnoController -m Alumno -dc ApplicationDbContext --relativeFolderPath Controllers/AdminControllers --useDefaultLayout --referenceScriptLibraries
+dotnet aspnet-codegenerator controller -name ProfesorController -m Profesor -dc ApplicationDbContext --relativeFolderPath Controllers/AdminControllers --useDefaultLayout --referenceScriptLibraries
+dotnet aspnet-codegenerator controller -name MateriaController -m Materia -dc ApplicationDbContext --relativeFolderPath Controllers/AdminControllers --useDefaultLayout --referenceScriptLibraries
+dotnet aspnet-codegenerator controller -name TipoController -m Tipo -dc ApplicationDbContext --relativeFolderPath Controllers/AdminControllers --useDefaultLayout --referenceScriptLibraries
+dotnet aspnet-codegenerator controller -name CarreraController -m Carrera -dc ApplicationDbContext --relativeFolderPath Controllers/AdminControllers --useDefaultLayout --referenceScriptLibraries
+dotnet aspnet-codegenerator controller -name CicloController -m Ciclo -dc ApplicationDbContext --relativeFolderPath Controllers/AdminControllers --useDefaultLayout --referenceScriptLibraries
+dotnet aspnet-codegenerator controller -name CompetenciaController -m Competencia -dc ApplicationDbContext --relativeFolderPath Controllers/AdminControllers --useDefaultLayout --referenceScriptLibraries
